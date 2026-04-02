@@ -36,7 +36,7 @@ function getFileId(file: File) {
   return `${file.name}-${file.size}`;
 }
 
-const API_BASE_URL = 'https://s3-multipart-upload.onrender.com/multipart';
+const API_BASE_URL = import.meta.env.VITE_MULTIPART_API_URL as string;
 type UploadState = 'idle' | 'uploading' | 'paused' | 'done' | 'error';
 const MB = 1024 * 1024;
 const GB = 1024 * MB;

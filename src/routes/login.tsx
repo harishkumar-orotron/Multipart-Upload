@@ -6,8 +6,7 @@ export const Route = createFileRoute('/login')({
   component: LoginPage,
 })
 
-// ✏️ Update this to your actual login API endpoint
-const LOGIN_URL ="https://v2-dev-api.esigns.io/staging/v1.0/signin/v2"
+const LOGIN_URL = import.meta.env.VITE_LOGIN_URL as string;
 
 function LoginPage() {
   const navigate = useNavigate()
